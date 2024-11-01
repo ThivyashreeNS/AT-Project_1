@@ -83,18 +83,22 @@ AT_Project_01/
    - __test_TC_PIM_03:__ Tests deleting an employee and ensures the deletion is confirmed with a success message.
 
 ## Running the Tests:
-- To execute all test cases in the project, navigate to the project directory and use the following command:	`pytest`
+- __To run all test cases:__
+  - To execute all test cases in the project, navigate to the project directory and use the following command:	`pytest`
    This command will automatically discover and run all test files that match the pattern **test_*.py**
-- Running Specific Tests:
+
+- __Running Specific Tests:__
   - To run a specific test case, specify the test file and the test function. For example, to run the login test cases, use:
     `pytest test_loginTestSuite.py`
   - To run a specific test within that file, use: `pytest test_loginTestSuite.py::test_tc_login_01`
-- Generate a Report:
+  
+- __Generate a Report:__
   -  To create an HTML report of the test results, you can use:
      ```
      pytest -v -s --capture=sys --html=Reports\loginTC.html test_loginTestSuite.py
      ```
-- Viewing Test Results:
+     
+- __Viewing Test Results:__
   - After running the tests, results will be displayed in the terminal. You will see the status of each test (passed, failed, etc.), along with any relevant output or error messages.
   - Check the output in the console for test results. Successful tests will also update the corresponding results in *test_data.xlsx*.
   - The pytest html report will be generated and saved in the Reports folder.

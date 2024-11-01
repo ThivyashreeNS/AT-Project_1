@@ -12,7 +12,7 @@ def test_TC_PIM_01():
     test_msg = "Success Successfully Saved"
     # Check if the test case returns the expected message and writes to Excel
     assert shree.TC_PIM_01() == test_msg
-    xlobj.write_data(4, 9, test_msg)
+    xlobj.write_data(4, 11, test_msg)
     # Close the driver.
     shree.close_driver()
 
@@ -23,7 +23,7 @@ def test_TC_PIM_02():
     # Validate the test case result.
     assert shree.TC_PIM_02() == updated_msg
     # Write result to Excel.
-    xlobj.write_data(5, 9, updated_msg)
+    xlobj.write_data(5, 11, updated_msg)
     shree.close_driver()
 
 # Test case for the second PIM functionality - Delete an employee
@@ -32,5 +32,5 @@ def test_TC_PIM_03():
     delete_msg = "Successfully Deleted"
     # Validate the test case result.
     assert shree.TC_PIM_03() == delete_msg
-    xlobj.write_data(6, 9, delete_msg)
+    xlobj.write_data(6, 11, delete_msg)
     shree.close_driver()

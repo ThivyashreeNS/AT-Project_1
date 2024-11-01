@@ -8,10 +8,10 @@ This project is designed for automating the testing of a OrangeHRM web applicati
 - [Features](#features)
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
-- [Project Structure](#project_structure)
-- [Test Cases](#test_cases)
-- [Running the Tests](#running_the_tests)
-- [Test Data Configuration](#test_data_configuration)
+- [Project Structure](#project-structure)
+- [Test Cases](#test-cases)
+- [Running the Tests](#running-the-tests)
+- [Test Data Configuration](#test-data-configuration)
 
 ## Features:
 - __User Authentication Testing:__ Test the login functionality with valid and invalid credentials.

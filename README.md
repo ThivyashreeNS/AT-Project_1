@@ -2,7 +2,7 @@
 Guvi, Capstone Project-1
 
 ## Overview:
-    This project is designed for automating the testing of a OrangeHRM web application using Python, Selenium WebDriver and Pytest. The focus is on verifying user login functionality and employee management operations such as adding, editing, and deleting employee records and utilizes Excel for data management.
+This project is designed for automating the testing of a OrangeHRM web application using Python, Selenium WebDriver and Pytest. The focus is on verifying user login functionality and employee management operations such as adding, editing, and deleting employee records and utilizes Excel for data management.
 
 ## Table of Contents:
 - [Features](#features)

@@ -30,8 +30,8 @@ class Project01TestCases(WebData, TestLocators):
     # Login method using credentials from Excel.
     def login(self, username_row, password_row):
         # Read username and password from Excel
-        username = self.xlobj.read_data(username_row, 6)
-        password = self.xlobj.read_data(password_row, 7)
+        username = self.xlobj.read_data(username_row, 8)
+        password = self.xlobj.read_data(password_row, 9)
         try:
             # Wait for the username & password field and input data, then click login.
             self.wait.until(EC.presence_of_element_located((By.NAME, TestLocators().username_name))).send_keys(username)
@@ -48,15 +48,16 @@ class Project01TestCases(WebData, TestLocators):
                     return self.driver.current_url, error_text  # Return current URL and error text
             # Return any exceptions encountered
             except Exception as error:
-                return error
+                pass
 
             # Return current URL after successful login
             print("Login successful.")
-            return self.driver.current_url
+            return self.driver.current_url, None
         # Print any login errors
         except Exception as error:
             print("Error during login:", error)
             return self.driver.current_url, error
+
 
     # Test case for first login scenario
     def tc_login_01(self):
@@ -83,7 +84,8 @@ class Project01TestCases(WebData, TestLocators):
             print("Clicked on Add button")
 
             # Input first name, middle name, and last name from WebData
-            self.wait.until(EC.presence_of_element_located((By.NAME, TestLocators().first_name))).send_keys(WebData().firstname)
+            first = self.wait.until(EC.presence_of_element_located((By.NAME, TestLocators().first_name)))
+            first.send_keys(WebData().firstname)
             print("Entered First Name")
             self.wait.until(EC.presence_of_element_located((By.NAME, TestLocators().middle_name))).send_keys(WebData().middlename)
             print("Entered Middle Name")
@@ -92,10 +94,11 @@ class Project01TestCases(WebData, TestLocators):
 
             # add_photo_button = self.wait.until(EC.element_to_be_clickable((By.XPATH, TestLocators().add_photo_btn)))
             # add_photo_button.click()
-            # # Wait for the file input element to be visible
+            # print("add photo clicked")
+            # Wait for the file input element to be visible
             # self.driver.implicitly_wait(10)
             # add_photo = self.wait.until(EC.visibility_of_element_located((By.XPATH, TestLocators().photo_input)))
-            # add_photo.send_keys(WebData().photo)
+            # add_photo_button.send_keys(WebData().photo)
             # print("pic")
 
             # Get the employee ID after adding an employee
@@ -104,7 +107,7 @@ class Project01TestCases(WebData, TestLocators):
             employee_id = employee_id_box.get_attribute("value")
             print(employee_id)
             # Write the employee ID to Excel file
-            self.xlobj.write_data(4, 10, employee_id)
+            self.xlobj.write_data(4, 12, employee_id)
             # Click save button
             save = self.wait.until(EC.presence_of_element_located((By.XPATH, TestLocators().save_button)))
             save.click()
@@ -128,7 +131,7 @@ class Project01TestCases(WebData, TestLocators):
             # Navigate to PIM
             self.wait.until(EC.presence_of_element_located((By.LINK_TEXT, TestLocators().pim_text))).click()
             # Search for the employee using the previously saved employee ID
-            employee_id = self.xlobj.read_data(4, 10)
+            employee_id = self.xlobj.read_data(4, 12)
             self.wait.until(EC.presence_of_element_located((By.XPATH, TestLocators().employee_id_box))).send_keys(employee_id)
             self.wait.until(EC.presence_of_element_located((By.XPATH, TestLocators().search_button))).click()
             # Edit employee details
@@ -185,7 +188,7 @@ class Project01TestCases(WebData, TestLocators):
             # Navigate to PIM
             self.wait.until(EC.presence_of_element_located((By.LINK_TEXT, TestLocators().pim_text))).click()
             # Search for employee
-            employee_id = self.xlobj.read_data(4, 10)
+            employee_id = self.xlobj.read_data(4, 12)
             self.wait.until(EC.presence_of_element_located((By.XPATH, TestLocators().employee_id_box))).send_keys(employee_id)
             self.wait.until(EC.presence_of_element_located((By.XPATH, TestLocators().search_button))).click()
             # Delete employee details

@@ -56,8 +56,8 @@ To successfully set up and run the Selenium Automation Testing Project, follow t
       - __Webdriver-manager :__ To automatically manage browser drivers.
           Install WebDriver Manager Module: `pip install webdriver-manager`
 
-```
 ## Project Structure: 
+```python
 AT_Project_01
 ├── Data.py                         # Contains the Data class for test data and configuration.
 │   └── class WebData:

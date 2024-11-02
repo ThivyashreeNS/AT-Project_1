@@ -22,18 +22,18 @@ This project is designed for automating the testing of a OrangeHRM web applicati
 - __Data-Driven Testing Framework:__ Utilizes Excel files for input data, allowing for flexible test execution with varying user credentials and employee details.
 - __Automation Framework:__ Built using Selenium for browser automation and Pytest for test case management.
 
-## Prerequisites:
+## Prerequisites
 - Python 3.x
 - Required libraries:
-  - selenium
-  - pytest
-  - openpyxl
-  - webdriver-manager
+  - `selenium`
+  - `pytest`
+  - `openpyxl`
+  - `webdriver-manager`
  
 ## Installation:
 To successfully set up and run the Selenium Automation Testing Project, follow these steps:
 
-1. Ensure that you have Python 3.x installed on your machine. You can download it from _python.org_.
+1. Ensure that you have Python 3.x installed on your machine. You can download it from  [python.org](https://www.python.org/).
 
 2. Familiarity with command-line interface (CLI) tools is recommended for executing commands.
 
@@ -57,24 +57,35 @@ To successfully set up and run the Selenium Automation Testing Project, follow t
           Install WebDriver Manager Module: `pip install webdriver-manager`
 
 ## Project Structure: 
-```
-AT_Project_01/
-├── Data/
-│   └── WebData.py                # Contains test data and configuration.
-├── Locators/
-│   └── TestLocators.py            # Defines locators for web elements.
-├── ExcelFunctions/
-│   └── ExcelFunctions.py           # Functions for reading and writing Excel files.
-├── Project01TestCases.py           # Contains test case implementations (main file).
-├── TestCases/
+AT_Project_01
+├── Data.py                         # Contains the Data class for test data and configuration.
+│   └── class WebData:
+├── Locators.py                     # Defines the TestLocators class for web element locators.
+│   └── class TestLocators:
+├── ExcelFunctions.py               # Contains the ExcelFunctions class for reading and writing Excel files.
+│   └── class ExcelFunctions:
+├── Project01TestCases.py           # Contains the Project01TestCases class with test case implementations (main file).
+│   ├── class Project01TestCases:
+│   │   ├── def login():            # Login method
+│   │   ├── def tc_login_01():      # Test case for Valid Login
+│   │   ├── def tc_login_02():      # Test case for Inalid Login
+│   │   ├── def TC_PIM_01():        # Test case for add new employee
+│   │   ├── def TC_PIM_02():        # Test case for edit employee
+│   │   └── def TC_PIM_03():        # Test case for delete employee
+├── Tests/
 │   ├── test_loginTestSuite.py      # Test suite for login tests.
+│   │   ├── def test_tc_login_01():
+│   │   └── def test_tc_login_02():
 │   └── test_suite_PIM.py           # Test suite for employee management tests.
+│       ├── def test_TC_PIM_01():
+│       ├── def test_TC_PIM_02():
+│       └── def test_TC_PIM_03():
 ├── common.py                       # Initializes common resources for tests.
 └── test_data.xlsx                 # Excel file containing test data.
-├── Reports/
-│   ├── loginTC.html                # Pytest HTML Report for the Login test suite.
-│   └── pimTC.html                  # Pytest HTML Report for the PIM test suite.
-```
+└── Reports/
+    ├── loginTC.html                # Pytest HTML Report for the Login test suite.
+    └── pimTC.html                  # Pytest HTML Report for the PIM test suite.
+
 
 ## Test Cases:
 -  __Login Tests:__

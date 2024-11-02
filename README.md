@@ -15,11 +15,17 @@ This project is designed for automating the testing of a OrangeHRM web applicati
 
 ## Features:
 - __User Authentication Testing:__ Test the login functionality with valid and invalid credentials.
-- __Employee Management:__ Tests functionalities for adding, editing, and deleting employee details.
+  
+- __Employee Management:__ Tests functionalities for adding, editing, and deleting employee details
+  
 - __Excel Integration:__ Read from and write test data to an Excel file for easy management and reporting.
+  
 - __Reusable Components:__ Common functions and data are abstracted into separate modules for better maintainability.
+  
 - __Dynamic Waits:__ Uses Explicit waits for web elements to ensure stability during testing.
-- __Data-Driven Testing Framework:__ Utilizes Excel files for input data, allowing for flexible test execution with varying user credentials and employee details.
+  
+- __Data-Driven Testing Framework:__ Utilizes Excel files for input data, allowing for flexible test execution with varying user credentials and employee details
+  
 - __Automation Framework:__ Built using Selenium for browser automation and Pytest for test case management.
 
 ## Prerequisites

@@ -45,20 +45,27 @@ To successfully set up and run the Selenium Automation Testing Project, follow t
 
 3. Set Up a Virtual Environment (Optional but Recommended):
    - It's best practice to create a virtual environment to manage dependencies for your project:
+     
      - Verify Python Virtual Environment: `Virtualenv --version`
+       
      - Create Virtual Environment:  `virtualenv cd`
+       
      - Activate Virtual Environment:  `Scripts\Activate`
+       
      - Deactivate Virtual Environment: `Scripts\Deactivate`
        
 4.  Install Required Libraries:
     - Install the necessary Python libraries using pip. The required libraries for this project include:
       - __Selenium :__ For web browser automation.
         Install Python Selenium Module: `pip install selenium`
+        
       - __Pytest :__ For running test cases and managing test execution.
         `pip install pytest`
          Pytest Report: `pip install pytest-html`
+        
       - __openpyxl :__ For reading and writing Excel files.
          `pip install selenium openpyxl`
+        
       - __Webdriver-manager :__ To automatically manage browser drivers.
           Install WebDriver Manager Module: `pip install webdriver-manager`
 
@@ -96,12 +103,17 @@ AT_Project_01
 
 ## Test Cases:
 -  __Login Tests:__
+  
    - __test_tc_login_01:__ Tests the login functionality using credentials from Excel and checks if the user is directed to the dashboard.
+     
    - __test_tc_login_02:__ Another login test to validate login with different credentials and handles error messages.
      
 - __Employee Management Tests:__
+  
    - __test_TC_PIM_01:__ Tests adding a new employee and checks for a success message.
+     
    - __test_TC_PIM_02:__ Tests editing an existing employee's details and verifies the updated message.
+     
    - __test_TC_PIM_03:__ Tests deleting an employee and ensures the deletion is confirmed with a success message.
 
 ## Running the Tests:
@@ -122,11 +134,14 @@ AT_Project_01
      
 - __Viewing Test Results:__
   - After running the tests, results will be displayed in the terminal. You will see the status of each test (passed, failed, etc.), along with any relevant output or error messages.
+    
   - Check the output in the console for test results. Successful tests will also update the corresponding results in *test_data.xlsx*.
+    
   - The pytest html report will be generated and saved in the Reports folder.
 
 ## Test Data Configuration:
 - Ensure that the *test_data.xlsx* file is properly configured with the necessary test credentials and data for your tests to execute correctly.
+  
 - Check the output in the console for test results. Successful tests will also update the corresponding results in *test_data.xlsx*.
 
 

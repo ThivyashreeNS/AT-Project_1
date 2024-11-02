@@ -56,6 +56,7 @@ To successfully set up and run the Selenium Automation Testing Project, follow t
       - __Webdriver-manager :__ To automatically manage browser drivers.
           Install WebDriver Manager Module: `pip install webdriver-manager`
 
+```
 ## Project Structure: 
 AT_Project_01
 ├── Data.py                         # Contains the Data class for test data and configuration.
@@ -85,7 +86,7 @@ AT_Project_01
 └── Reports/
     ├── loginTC.html                # Pytest HTML Report for the Login test suite.
     └── pimTC.html                  # Pytest HTML Report for the PIM test suite.
-
+```
 
 ## Test Cases:
 -  __Login Tests:__
